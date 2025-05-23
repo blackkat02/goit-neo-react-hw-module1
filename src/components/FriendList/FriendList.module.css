@@ -1,6 +1,8 @@
 .friendList {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    max-width: 1200px;
+  display: flex;
+  gap: 10px;
+  max-width: 1200px;
+  list-style: none;
+  padding: 0;
+  margin: 50px;
 }

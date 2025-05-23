@@ -1,0 +1,57 @@
+.transactionHistory {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 50px;
+  background-color: #ffffff;
+  border: 2px solid #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.centered {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.tableHeader {
+  background-color: #00bcd5;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 16px 20px;
+  border: 1px solid #e0e0e0;
+}
+
+.tableRow {
+  transition: background-color 0.2s ease;
+}
+
+.tableRow:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.tableRow:hover {
+  background-color: #f0f8fa;
+}
+
+.tableCell {
+  padding: 14px 20px;
+  border: 1px solid #e0e0e0;
+  color: #333333;
+}
+
+
+.tableCell:first-child {
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.amount {
+  font-family: 'Courier New', Courier, monospace;
+  color: #2a5885;
+}
+
+.currency {
+  text-transform: uppercase;
+  font-weight: 500;
+}

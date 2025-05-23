@@ -1,22 +1,24 @@
 import PropTypes from 'prop-types';
+import clsx from 'clsx';
 import items from '../../transactions.json';
+import styles from './TransactionHistory.module.css';
 
 function TransactionHistory() {
   return (
-    <table className="transaction-history">
+    <table className={styles.transactionHistory}>
       <thead>
         <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+          <th className={styles.tableHeader}>Type</th>
+          <th className={styles.tableHeader}>Amount</th>
+          <th className={styles.tableHeader}>Currency</th>
         </tr>
       </thead>
       <tbody>
         {items.map(({ id, type, amount, currency }) => (
-          <tr key={id}>
-            <td>{type}</td>
-            <td>{amount}</td>
-            <td>{currency}</td>
+          <tr key={id} className={styles.tableRow}>
+            <td className={styles.tableCell}>{type}</td>
+            <td className={clsx(styles.tableCell, styles.amount)}>{amount}</td>
+            <td className={clsx(styles.tableCell, styles.currency)}>{currency}</td>
           </tr>
         ))}
       </tbody>

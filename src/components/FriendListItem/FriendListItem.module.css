@@ -1,6 +1,7 @@
 .item {
-  display: flex;
+  display: block;
   align-items: center;
+  border: 1px solid burlywood;
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
@@ -8,24 +9,29 @@
 
 .status {
   display: block;
-  width: 15px;
-  height: 15px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   margin-right: 15px;
 }
 
 .online {
-  background-color: green;
+  color: green;
 }
 
 .offline {
-  background-color: red;
+  color: red;
 }
 
 .avatar {
-  margin-right: 15px;
+  margin-right: 1px;
 }
 
 .name {
   font-weight: 500;
+}
+
+.statusText {
+  margin: 0;
+  font-size: 0.8em;
 }

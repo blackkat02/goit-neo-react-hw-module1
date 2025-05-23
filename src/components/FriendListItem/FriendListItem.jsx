@@ -1,14 +1,28 @@
 import PropTypes from 'prop-types';
+import clsx from 'clsx';
 import styles from './FriendListItem.module.css';
 
 const FriendListItem = ({ avatar, name, isOnline }) => (
   <div className={styles.item}>
-    <span className={isOnline ? styles.online : styles.offline}></span>
-    <img className={styles.avatar} src={avatar} alt="User avatar" width="48" />
-    <p className={styles.name}>{name}</p>
-    <p className={isOnline ? styles.online : styles.offline}>
-      {isOnline ? 'Online' : 'Offline'}
-    </p>
+    <span className={clsx(styles.status, {
+      [styles.online]: isOnline,
+      [styles.offline]: !isOnline
+    })}></span>
+    <img 
+      className={styles.avatar} 
+      src={avatar} 
+      alt={`${name}'s avatar`} 
+      width="48" 
+    />
+    <div className={styles.info}>
+      <p className={styles.name}>{name}</p>
+      <p className={clsx(styles.statusText, {
+        [styles.online]: isOnline,
+        [styles.offline]: !isOnline
+      })}>
+        {isOnline ? 'Online' : 'Offline'}
+      </p>
+    </div>
   </div>
 );
 
