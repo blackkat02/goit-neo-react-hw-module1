@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import items from '../../transactions.json';
 import styles from './TransactionHistory.module.css';
 
-function TransactionHistory() {
+function TransactionHistory({ items }) {
   return (
     <table className={styles.transactionHistory}>
       <thead>
