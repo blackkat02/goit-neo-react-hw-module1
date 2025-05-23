@@ -12,15 +12,17 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  margin-right: 15px;
+  margin-bottom: 15px;
 }
 
 .online {
   color: green;
+  margin-bottom: 15px;
 }
 
 .offline {
   color: red;
+  margin-bottom: 15px;
 }
 
 .avatar {
